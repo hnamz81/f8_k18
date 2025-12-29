@@ -57,9 +57,9 @@ console.log(e, typeof e)
 //Part 5:
 //Boolean(0)	     false
 // Boolean(1)        true
-// Boolean("")       fales
+// Boolean("")       false
 // Boolean("hello")  true
-// Boolean(null)     fales
+// Boolean(null)     false
 // Boolean([])       true
 
 //Part 6:
