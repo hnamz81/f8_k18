@@ -1,5 +1,5 @@
 const products = [
-    { id: 1, name: "Gạo ST25 (5kg)", price: 180000, remaining: 20 },
+    { id: 1, name: "Gạo ST25 (5kg)", price: 18000, remaining: 20 },
     { id: 2, name: "Dầu ăn Simply (1L)", price: 65000, remaining: 15 },
     { id: 3, name: "Nước mắm Nam Ngư (750ml)", price: 45000, remaining: 30 },
     { id: 4, name: "Sữa tươi Vinamilk (1L)", price: 38000, remaining: 25 },
@@ -9,7 +9,7 @@ const products = [
 let orders =[]
 let orderId = 1
 
-// createOrder=======================================================
+// create
 const createOrder = (productID, orderQuantity) => {
     if (!productID || !orderQuantity || orderQuantity <= 0) {
         return "Invalid input"
@@ -33,13 +33,13 @@ const createOrder = (productID, orderQuantity) => {
     orders.push(order)
     return order
 }
-
+console.log("==================Create=====================")
 console.log(createOrder(1, 5));
 console.log(createOrder(2, 6));
 
 
 
-// updateOrder========================================================================
+// update
 const updateOrder = (orderId, newQuantity) => {
     if (!newQuantity || newQuantity <= 0) {
         return ("Quantity must be greater than 0")
@@ -66,12 +66,12 @@ const updateOrder = (orderId, newQuantity) => {
     }
 }
 console.log("==================Update=====================")
-console.log(updateOrder(5, 0)) //Quantity must be greater than 0
+console.log(updateOrder(5, 0))
 console.log(updateOrder(1, 7))
 console.log(updateOrder(2, 4))
 console.log(orders)
 
-// updateOrder========================================================================
+// delete
 const deleteOrder = (orderId) => {
     if (orderId === null || typeof orderId !== "number") {
         return "Invalid input"
@@ -91,5 +91,5 @@ const deleteOrder = (orderId) => {
 }
 console.log("==================Delete=====================")
 console.log(deleteOrder(1))
-console.log(deleteOrder("3")) // Invalid input
-console.log(deleteOrder(4)) //Not found
+console.log(deleteOrder("8"))
+console.log(deleteOrder(6))
