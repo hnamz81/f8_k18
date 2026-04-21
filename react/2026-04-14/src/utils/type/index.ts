@@ -5,7 +5,7 @@ interface LoginResponse {
 
 interface LoginAccount {
     email: string;
-    password?: string; // Thêm password vào đây
+    password: string;
 }
 
 interface ApiResponse<T> {

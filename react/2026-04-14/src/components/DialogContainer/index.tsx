@@ -28,22 +28,6 @@ const CustomerDialog = ({ title, fields, isOpen, onClose, customer, onChange, on
         }
     };
 
-    // const renderDialogContent = () => {
-    //     return fields.map((column) => (
-    //         <TextField
-    //             select // Kích hoạt chế độ chọn
-    //             key={column.id}
-    //             fullWidth
-    //             variant="standard"
-    //             margin="dense"
-    //             label={column.label}
-    //             name={column.name}
-    //             value={customer ? (customer[column.name as keyof Customer] ?? '') : ''}
-    //             onChange={(e) => onChange(column.name, e.target.value)}
-    //         />
-    //     ));
-    // };
-
     const renderDialogContent = () => {
         return fields.map((column) => {
             const isRankField = column.name === 'rank';
